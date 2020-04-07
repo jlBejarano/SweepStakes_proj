@@ -22,21 +22,20 @@ namespace Sweepstakes
             this.registrationNumber = registrationNumber;
         }
 
-        public void AddContestant()
+        public void AddContestant(Contestant contestant)
         {
-            List<Contestant>
+            List<Contestant> = new List<contestant>();
+            contestant.Add("first name");
+            contestant.Add("last name");
+            contestant.Add("email address");
+            contestant.Add("registration number");
+
+
         }
-        
 
-
-
-
-
-        
-        
-           
-        
-
-
+        private void Add(string v)
+        {
+            
+        }
     }
 }

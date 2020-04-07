@@ -10,11 +10,27 @@ namespace Sweepstakes
     {
         public string name;
         public Contestant contestant;
+        Dictionary<string,int> dict = new Dictionary<string, int>();
+        Random random;
 
         public SweepStakes(string name)
         {
             this.name = name;
+        
         }
+
+        public void PickWinner()
+        {
+            Random random = new Random();
+        }
+
+
+       
+        
+
+        
+
+
 
         
         
