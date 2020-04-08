@@ -10,8 +10,10 @@ namespace Sweepstakes
     {
         public void ISweepStakesManager()
         {
-            void InsertSweepstakes(Sweepstakes sweepstakes)
-            Sweepstakes GetSweepstakes()
+            SweepStakes getsweepStakes;
+
+
+           
         }
     }
 }

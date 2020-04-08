@@ -24,7 +24,7 @@ namespace Sweepstakes
 
         public void AddContestant(Contestant contestant)
         {
-            List<Contestant> = new List<contestant>();
+            List<string> contestants = new List<string>();
             contestant.Add("first name");
             contestant.Add("last name");
             contestant.Add("email address");
