@@ -10,7 +10,8 @@ namespace Sweepstakes
     {
         public void CreateMarketingFirmManager()
         {
-
+            MarketingFirm marketingFirm = new MarketingFirm();
+            marketingFirm.CreateSweepstakes();
         }
     }
 }

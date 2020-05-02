@@ -10,6 +10,10 @@ namespace Sweepstakes
     {
         public  ISweepstakesManager manager;
 
+        public MarketingFirm()
+        {
+        }
+
         public MarketingFirm(ISweepstakesManager manager)
         {
             this.manager = manager;
@@ -17,8 +21,8 @@ namespace Sweepstakes
 
         public void CreateSweepstakes()
         {
-            sweepstakes newSweepstakes = new sweepstakes();
-            manager.InsertSweepstakes(newSweepstakes);
+            sweepstakes Sweepstakes = new sweepstakes();
+            manager.InsertSweepstakes(Sweepstakes);
         }
     }
 }

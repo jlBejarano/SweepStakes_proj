@@ -21,7 +21,6 @@ namespace Sweepstakes
         public sweepstakes()
         {
         }
-
         public void RegisterContestant(Contestant contestant)
         {
             contestant.firstName = Interface.FirstName();
@@ -30,10 +29,29 @@ namespace Sweepstakes
             contestant.registrationNumber = Interface.RegistrationNumber();
         }
 
-        public void GetWinner()
+        public Contestant PickWinner()
         {
-            Random random = new Random();
-            winnersNumber = random.Next();
+            winnersNumber = random.Next(0, (contestants.Count - 1));
+            foreach(KeyValuePair<int, Contestant> contestant in contestants)
+            {
+
+                if(contestants.Count == 0)
+                {
+                    Console.WriteLine("No registered contestants.");
+                }
+                else if (contestant.Key == winnersNumber)
+                {
+                return contestant.Value;
+                }
+            }
+            return PickWinner();
+           
+        }
+        
+
+        public void PrintContestantInfo(Contestant contestant)
+        {
+            Console.WriteLine(contestant.firstName + contestant.lastName + contestant.emailAddress + contestant.registrationNumber);
         }
 
 
