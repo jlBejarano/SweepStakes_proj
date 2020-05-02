@@ -6,25 +6,37 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    public class Sweepstakes
+    public class sweepstakes
     {
-        
-        public string name;
+        public string name { get; set; }
         public int winnersNumber;
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
         Random random = new Random();
 
-        public Sweepstakes(string name)
+        public sweepstakes(string name)
         {
             this.name = name;
-        
+        }
+
+        public sweepstakes()
+        {
         }
 
         public void RegisterContestant(Contestant contestant)
         {
-            contestant.firstName = Interface.firstName();
-            Interface.ConterstantfirstName();
+            contestant.firstName = Interface.FirstName();
+            contestant.lastName = Interface.LastName();
+            contestant.emailAddress = Interface.EmailAdress();
+            contestant.registrationNumber = Interface.RegistrationNumber();
         }
+
+        public void GetWinner()
+        {
+            Random random = new Random();
+            winnersNumber = random.Next();
+        }
+
+
 
 
        

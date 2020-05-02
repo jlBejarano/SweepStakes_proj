@@ -8,34 +8,31 @@ namespace Sweepstakes
 {
     public static class Interface
     {
-        
+        private static int registrationNumber;
 
-        public string regNum { get; set; }
-
-        public void GetFirstName()
+        public static string FirstName()
         {
-             Console.WriteLine("What is your first name?");
-             Console.ReadLine();
+            Console.WriteLine("Enter first name.");
+            return Console.ReadLine();
+        }
+
+        public static string LastName()
+        {
+             Console.WriteLine("Enter last name.");
+             return Console.ReadLine();
         } 
         
-        public void GetLastName()
+        public static string EmailAdress()
         {
-            Console.WriteLine("What is your last name?");
-            Console.ReadLine();
+            Console.WriteLine("Enter email address.");
+            return Console.ReadLine();
         }
 
-        public void GetEmailAddress()
+        public static int RegistrationNumber()
         {
-            Console.WriteLine("What is your email address?");
-            Console.ReadLine();
-        }
-
-        public void GetRegistrationNumber()
-        {
-            Console.WriteLine("The registration number is "+regNum);
-            Console.ReadLine();
-        }
-       
-       
+            registrationNumber = +1;
+            Console.WriteLine("What is your registration number?");
+            return registrationNumber;
+        }  
     }
 }
