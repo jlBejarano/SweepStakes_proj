@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    public class SweepStakes
+    public class Sweepstakes
     {
+        
         public string name;
-        public Contestant contestant;
-        Dictionary<string,int> dict = new Dictionary<string, int>();
-        Random random;
+        public int winnersNumber;
+        Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
+        Random random = new Random();
 
-        public SweepStakes(string name)
+        public Sweepstakes(string name)
         {
             this.name = name;
         
         }
 
-        public void PickWinner()
+        public void RegisterContestant(Contestant contestant)
         {
-            Random random = new Random();
+            contestant.firstName = Interface.firstName();
+            Interface.ConterstantfirstName();
         }
 
 

@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    public class Interface
+    public static class Interface
     {
-        public string getfirstName, getlastName, getemailAddress;
-        public int getregistrationNumber;
+        
 
         public string regNum { get; set; }
 

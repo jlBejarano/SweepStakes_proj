@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class MarketingFirm
+    public class MarketingFirm
     {
-        ISweepstakesManager SweepstakesManager;
+        public  ISweepstakesManager manager;
 
-        public MarketingFirm()
+        public MarketingFirm(ISweepstakesManager manager)
         {
-            this.SweepstakesManager = new ISweepstakesManager();
+            this.manager = new manager;
+        }
+        public void CreateSweepstakes()
+        {
+            Sweepstakes newSweepstakes = new Sweepstakes();
+            manager.InsertSweepstakes(newSweepstakes);
         }
     }
 }
